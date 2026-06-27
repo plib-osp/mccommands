@@ -1,0 +1,481 @@
+<section class="hero">
+  <div class="hero-bg">
+    <div class="rain-bg"></div>
+    <div class="rain-dots"></div>
+    <div class="hero-glow"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+      v1.0.0 &middot; Early Access
+    </div>
+    <h1 class="hero-title">Every Minecraft<br><em>Command, Every Version</em></h1>
+    <p class="hero-desc">A comprehensive, version-by-version API for every Minecraft command. From Alpha 1.0.0 to the latest release.</p>
+    <div class="hero-actions">
+      <a href="/api" class="btn btn-primary">Explore the API &nearr;</a>
+      <a href="<%= githubUrl %>" target="_blank" class="btn btn-secondary">View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="section-bg">
+    <div class="pattern-tri" style="opacity:0.15;mask-image:radial-gradient(ellipse at center, black 15%, transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center, black 15%, transparent 70%);"></div>
+    <div class="hero-grid" style="background-size:60px 60px;mask-image:radial-gradient(ellipse at center, black 10%, transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center, black 10%, transparent 70%);"></div>
+    <div class="section-glow" style="top:30%;left:50%;width:700px;height:700px;background:radial-gradient(circle,rgba(255,255,255,0.02) 0%,transparent 70%);position:absolute;transform:translate(-50%,-50%);pointer-events:none;"></div>
+    <div class="mesh-bg">
+      <div class="mesh-blob mesh-blob-1"></div>
+      <div class="mesh-blob mesh-blob-2"></div>
+      <div class="mesh-blob mesh-blob-3"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Why MCCommands?</h2>
+      <p class="section-sub">Everything you need to query Minecraft commands across any version.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card span-2">
+        <div class="card-mesh card-mesh-1">
+          <div class="card-mesh-blob card-mesh-blob-1"></div>
+          <div class="card-mesh-blob card-mesh-blob-2"></div>
+        </div>
+        <div class="ripple-bg">
+          <div class="ripple-ring" style="--size:160px;"></div>
+          <div class="ripple-ring" style="--size:220px;"></div>
+          <div class="ripple-ring" style="--size:280px;"></div>
+        </div>
+        <div class="feature-card-content">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+          </div>
+          <h3 class="feature-title">Every Single Version</h3>
+          <p class="feature-desc">From Alpha 1.0.0 through Beta, Release, and every minor patch in between. We catalogue every version with its unique set of commands.</p>
+          <span class="feature-cta">Learn more &rarr;</span>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-mesh card-mesh-2">
+          <div class="card-mesh-blob card-mesh-blob-1"></div>
+          <div class="card-mesh-blob card-mesh-blob-2"></div>
+        </div>
+        <div class="feature-card-content">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10l-4.34-3.34"/><circle cx="18" cy="18" r="4"/><path d="m18 16.5v3"/><path d="m16.5 18h3"/></svg>
+          </div>
+          <h3 class="feature-title">Simple REST API</h3>
+          <p class="feature-desc">Clean JSON endpoints. No bloat. Query by version, category, or command name.</p>
+          <span class="feature-cta">View docs &rarr;</span>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-mesh card-mesh-3">
+          <div class="card-mesh-blob card-mesh-blob-1"></div>
+          <div class="card-mesh-blob card-mesh-blob-2"></div>
+        </div>
+        <div class="meteor-overlay">
+          <div class="meteor-line" style="top:10%;right:20%;animation-delay:0s;"></div>
+          <div class="meteor-line" style="top:-10%;right:60%;animation-delay:1.5s;"></div>
+          <div class="meteor-line" style="top:20%;right:80%;animation-delay:3s;"></div>
+        </div>
+        <div class="feature-card-content">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3 class="feature-title">Developer Friendly</h3>
+          <p class="feature-desc">Well-documented endpoints with request/response schemas and code examples.</p>
+          <span class="feature-cta">Get started &rarr;</span>
+        </div>
+      </div>
+
+      <div class="feature-card span-2">
+        <div class="card-mesh card-mesh-4">
+          <div class="card-mesh-blob card-mesh-blob-1"></div>
+          <div class="card-mesh-blob card-mesh-blob-2"></div>
+        </div>
+        <div class="dot-overlay">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width:100%;height:100%;">
+            <defs>
+              <pattern id="dots1" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.2)"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#dots1)"/>
+          </svg>
+        </div>
+        <div class="feature-card-content">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h3 class="feature-title">Always Up-to-Date</h3>
+          <p class="feature-desc">New Minecraft versions added within days of release. Community contributions are welcome via GitHub.</p>
+          <span class="feature-cta">Contribute &rarr;</span>
+        </div>
+      </div>
+
+      <div class="feature-card span-3 marquee-card">
+        <div class="marquee-track">
+          <span class="marquee-item">/advancement</span>
+          <span class="marquee-item">/attribute</span>
+          <span class="marquee-item">/ban</span>
+          <span class="marquee-item">/bossbar</span>
+          <span class="marquee-item">/camera</span>
+          <span class="marquee-item">/clear</span>
+          <span class="marquee-item">/clone</span>
+          <span class="marquee-item">/damage</span>
+          <span class="marquee-item">/data</span>
+          <span class="marquee-item">/datapack</span>
+          <span class="marquee-item">/debug</span>
+          <span class="marquee-item">/defaultgamemode</span>
+          <span class="marquee-item">/deop</span>
+          <span class="marquee-item">/difficulty</span>
+          <span class="marquee-item">/effect</span>
+          <span class="marquee-item">/enchant</span>
+          <span class="marquee-item">/execute</span>
+          <span class="marquee-item">/experience</span>
+          <span class="marquee-item">/fill</span>
+          <span class="marquee-item">/forceload</span>
+          <span class="marquee-item">/function</span>
+          <span class="marquee-item">/gamemode</span>
+          <span class="marquee-item">/gamerule</span>
+          <span class="marquee-item">/give</span>
+          <span class="marquee-item">/help</span>
+          <span class="marquee-item">/kick</span>
+          <span class="marquee-item">/kill</span>
+          <span class="marquee-item">/list</span>
+          <span class="marquee-item">/locate</span>
+          <span class="marquee-item">/me</span>
+          <span class="marquee-item">/msg</span>
+          <span class="marquee-item">/op</span>
+          <span class="marquee-item">/pardon</span>
+          <span class="marquee-item">/particle</span>
+          <span class="marquee-item">/place</span>
+          <span class="marquee-item">/playsound</span>
+          <span class="marquee-item">/publish</span>
+          <span class="marquee-item">/recipe</span>
+          <span class="marquee-item">/reload</span>
+          <span class="marquee-item">/ride</span>
+          <span class="marquee-item">/save-all</span>
+          <span class="marquee-item">/say</span>
+          <span class="marquee-item">/schedule</span>
+          <span class="marquee-item">/scoreboard</span>
+          <span class="marquee-item">/seed</span>
+          <span class="marquee-item">/setblock</span>
+          <span class="marquee-item">/setworldspawn</span>
+          <span class="marquee-item">/spawnpoint</span>
+          <span class="marquee-item">/spectate</span>
+          <span class="marquee-item">/spreadplayers</span>
+          <span class="marquee-item">/stop</span>
+          <span class="marquee-item">/stopsound</span>
+          <span class="marquee-item">/summon</span>
+          <span class="marquee-item">/tag</span>
+          <span class="marquee-item">/team</span>
+          <span class="marquee-item">/teleport</span>
+          <span class="marquee-item">/tell</span>
+          <span class="marquee-item">/tellraw</span>
+          <span class="marquee-item">/time</span>
+          <span class="marquee-item">/title</span>
+          <span class="marquee-item">/tp</span>
+          <span class="marquee-item">/transfer</span>
+          <span class="marquee-item">/version</span>
+          <span class="marquee-item">/weather</span>
+          <span class="marquee-item">/whitelist</span>
+          <span class="marquee-item">/w</span>
+          <span class="marquee-item">/xp</span>
+          <span class="marquee-item">/advancement</span>
+          <span class="marquee-item">/attribute</span>
+          <span class="marquee-item">/ban</span>
+          <span class="marquee-item">/bossbar</span>
+          <span class="marquee-item">/camera</span>
+          <span class="marquee-item">/clear</span>
+          <span class="marquee-item">/clone</span>
+          <span class="marquee-item">/damage</span>
+          <span class="marquee-item">/data</span>
+          <span class="marquee-item">/datapack</span>
+          <span class="marquee-item">/debug</span>
+          <span class="marquee-item">/defaultgamemode</span>
+          <span class="marquee-item">/deop</span>
+          <span class="marquee-item">/difficulty</span>
+          <span class="marquee-item">/effect</span>
+          <span class="marquee-item">/enchant</span>
+          <span class="marquee-item">/execute</span>
+          <span class="marquee-item">/experience</span>
+          <span class="marquee-item">/fill</span>
+          <span class="marquee-item">/forceload</span>
+          <span class="marquee-item">/function</span>
+          <span class="marquee-item">/gamemode</span>
+          <span class="marquee-item">/gamerule</span>
+          <span class="marquee-item">/give</span>
+          <span class="marquee-item">/help</span>
+          <span class="marquee-item">/kick</span>
+          <span class="marquee-item">/kill</span>
+          <span class="marquee-item">/list</span>
+          <span class="marquee-item">/locate</span>
+          <span class="marquee-item">/me</span>
+          <span class="marquee-item">/msg</span>
+          <span class="marquee-item">/op</span>
+          <span class="marquee-item">/pardon</span>
+          <span class="marquee-item">/particle</span>
+          <span class="marquee-item">/place</span>
+          <span class="marquee-item">/playsound</span>
+          <span class="marquee-item">/publish</span>
+          <span class="marquee-item">/recipe</span>
+          <span class="marquee-item">/reload</span>
+          <span class="marquee-item">/ride</span>
+          <span class="marquee-item">/save-all</span>
+          <span class="marquee-item">/say</span>
+          <span class="marquee-item">/schedule</span>
+          <span class="marquee-item">/scoreboard</span>
+          <span class="marquee-item">/seed</span>
+          <span class="marquee-item">/setblock</span>
+          <span class="marquee-item">/setworldspawn</span>
+          <span class="marquee-item">/spawnpoint</span>
+          <span class="marquee-item">/spectate</span>
+          <span class="marquee-item">/spreadplayers</span>
+          <span class="marquee-item">/stop</span>
+          <span class="marquee-item">/stopsound</span>
+          <span class="marquee-item">/summon</span>
+          <span class="marquee-item">/tag</span>
+          <span class="marquee-item">/team</span>
+          <span class="marquee-item">/teleport</span>
+          <span class="marquee-item">/tell</span>
+          <span class="marquee-item">/tellraw</span>
+          <span class="marquee-item">/time</span>
+          <span class="marquee-item">/title</span>
+          <span class="marquee-item">/tp</span>
+          <span class="marquee-item">/transfer</span>
+          <span class="marquee-item">/version</span>
+          <span class="marquee-item">/weather</span>
+          <span class="marquee-item">/whitelist</span>
+          <span class="marquee-item">/w</span>
+          <span class="marquee-item">/xp</span>
+        </div>
+        <div class="feature-card-content" style="position:absolute;bottom:24px;left:24px;right:24px;z-index:3;">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="feature-title">Open Source</h3>
+          <p class="feature-desc">Fully open source. Fork it, contribute, suggest changes. Built by the community.</p>
+          <span class="feature-cta">View on GitHub &rarr;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="versions">
+  <div class="section-bg">
+    <div class="pattern-tri" style="opacity:0.1;mask-image:radial-gradient(ellipse at center, black 10%, transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center, black 10%, transparent 70%);"></div>
+    <div class="hero-grid" style="background-size:50px 50px;mask-image:radial-gradient(ellipse at center, black 8%, transparent 65%);-webkit-mask-image:radial-gradient(ellipse at center, black 8%, transparent 65%);"></div>
+    <div class="section-glow" style="top:60%;left:50%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,255,255,0.015) 0%,transparent 70%);position:absolute;transform:translate(-50%,-50%);pointer-events:none;"></div>
+    <div class="mesh-bg" style="opacity:0.4;">
+      <div class="mesh-blob mesh-blob-1" style="background:radial-gradient(circle,rgba(200,200,255,0.03) 0%,transparent 70%);"></div>
+      <div class="mesh-blob mesh-blob-2" style="background:radial-gradient(circle,rgba(255,200,200,0.02) 0%,transparent 70%);"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Coverage</div>
+      <h2 class="section-title">Supported Versions</h2>
+      <p class="section-sub">From Alpha 1.0.0 through Beta to the latest release. Over 900 versions catalogued with full command data.</p>
+    </div>
+
+    <div class="vl-timeline">
+      <div class="vl-era vl-era-alpha">
+        <div class="vl-era-header reveal">
+          <span class="vl-era-badge">2009 - 2010</span>
+          <h3 class="vl-era-title">Alpha</h3>
+          <p class="vl-era-desc">The earliest days. 20 alpha builds with the first commands ever added to Minecraft.</p>
+        </div>
+        <div class="vl-cards">
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">a1.0.0</div>
+            <div class="vl-card-meta">Minecraft is born. First commands added.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">a1.0.15</div>
+            <div class="vl-card-meta">/give and /ban introduced.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">a1.0.16</div>
+            <div class="vl-card-meta">/tp, /save-all, /list added.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">a1.2.0</div>
+            <div class="vl-card-meta">Creative mode. /gamemode arrives.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">+16 more</div>
+            <div class="vl-card-meta">Full command data for every alpha build.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vl-era vl-era-beta">
+        <div class="vl-era-header reveal">
+          <span class="vl-era-badge">2010 - 2011</span>
+          <h3 class="vl-era-title">Beta</h3>
+          <p class="vl-era-desc">The game takes shape. 9 beta releases with expanding command capabilities.</p>
+        </div>
+        <div class="vl-cards">
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">b1.0</div>
+            <div class="vl-card-meta">First proper beta release.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">b1.3</div>
+            <div class="vl-card-meta">Redstone updates. /seed introduced.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">b1.7</div>
+            <div class="vl-card-meta">Pistons added to the game.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">b1.8</div>
+            <div class="vl-card-meta">Adventure update. /kill and /difficulty.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">+5 more</div>
+            <div class="vl-card-meta">Complete command data for all beta builds.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vl-era vl-era-release">
+        <div class="vl-era-header reveal">
+          <span class="vl-era-badge">2011 - Present</span>
+          <h3 class="vl-era-title">Release</h3>
+          <p class="vl-era-desc">A decade of major updates. Every full release from 1.0 to 1.21 and beyond.</p>
+        </div>
+        <div class="vl-cards">
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">1.0</div>
+            <div class="vl-card-meta">Official release. The End, enchanting.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">1.5</div>
+            <div class="vl-card-meta">Redstone Update. Comparators, hoppers.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">1.8</div>
+            <div class="vl-card-meta">Bountiful Update. /blockdata, /clone, /fill.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">1.13</div>
+            <div class="vl-card-meta">The Update Aquatic. /data, /teleport.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">1.16</div>
+            <div class="vl-card-meta">Nether Update. /attribute, /locatebiome.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">1.20</div>
+            <div class="vl-card-meta">Trails & Tales. /camera, /ride.</div>
+          </div>
+          <div class="vl-card reveal">
+            <div class="vl-card-ver">+900 more</div>
+            <div class="vl-card-meta">Every minor release, snapshot, and pre-release covered.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="section-bg">
+    <div class="pattern-tri" style="opacity:0.12;mask-image:radial-gradient(ellipse at center, black 8%, transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center, black 8%, transparent 70%);"></div>
+    <div class="hero-grid" style="background-size:70px 70px;mask-image:radial-gradient(ellipse at center, black 5%, transparent 65%);-webkit-mask-image:radial-gradient(ellipse at center, black 5%, transparent 65%);"></div>
+    <div class="section-glow" style="top:50%;left:30%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.015) 0%,transparent 70%);position:absolute;transform:translate(-50%,-50%);pointer-events:none;"></div>
+  </div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Common questions about MCCommands.</p>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">What is MCCommands?</span>
+          <span class="faq-icon">
+            <span class="faq-icon-line"></span>
+            <span class="faq-icon-line faq-icon-line-v"></span>
+          </span>
+        </button>
+        <div class="faq-a">
+          <p>MCCommands is a REST API that provides a complete list of Minecraft commands for every version. From Alpha 1.0.0 to the latest release. It is designed for developers, server admins, and Minecraft enthusiasts.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Is it free to use?</span>
+          <span class="faq-icon">
+            <span class="faq-icon-line"></span>
+            <span class="faq-icon-line faq-icon-line-v"></span>
+          </span>
+        </button>
+        <div class="faq-a">
+          <p>Yes! MCCommands is completely free and open source under the Apache 2.0 license. View the source on <a href="#">GitHub</a>.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How do I use the API?</span>
+          <span class="faq-icon">
+            <span class="faq-icon-line"></span>
+            <span class="faq-icon-line faq-icon-line-v"></span>
+          </span>
+        </button>
+        <div class="faq-a">
+          <p>Make GET requests to our endpoints. Example: <code>GET /api/v1/commands?version=1.20</code>. Full documentation coming soon.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">How often is it updated?</span>
+          <span class="faq-icon">
+            <span class="faq-icon-line"></span>
+            <span class="faq-icon-line faq-icon-line-v"></span>
+          </span>
+        </button>
+        <div class="faq-a">
+          <p>New versions are added within days of official release. Snapshots, pre-releases, and full releases included.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-q-text">Can I contribute?</span>
+          <span class="faq-icon">
+            <span class="faq-icon-line"></span>
+            <span class="faq-icon-line faq-icon-line-v"></span>
+          </span>
+        </button>
+        <div class="faq-a">
+          <p>Absolutely. Open source. Submit a PR, suggest corrections, or add missing commands. Every contribution is appreciated.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="cta">
+  <div class="cta-bg">
+    <div class="cta-bg-inner">
+      <div class="cta-3d-grid"></div>
+    </div>
+    <div class="cta-fade"></div>
+    <div class="cta-glow"></div>
+  </div>
+  <div class="container cta-inner">
+    <h2 class="cta-title">Ready to Get Started?</h2>
+    <p class="cta-desc">Explore the API and start integrating Minecraft commands into your projects.</p>
+    <div class="hero-actions">
+      <a href="/api" class="btn btn-primary">Explore the API &nearr;</a>
+      <a href="<%= githubUrl %>" target="_blank" class="btn btn-secondary">View on GitHub</a>
+    </div>
+  </div>
+</section>

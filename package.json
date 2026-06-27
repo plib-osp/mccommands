@@ -1,0 +1,25 @@
+{
+  "name": "mccommands",
+  "version": "1.0.0",
+  "description": "Minecraft command list API for every version",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "minecraft",
+    "commands",
+    "api"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

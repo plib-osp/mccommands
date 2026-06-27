@@ -1,0 +1,232 @@
+{
+  "version": "Alpha v1.0.5_01",
+  "type": "alpha",
+  "commands": [
+    {
+      "name": "ban",
+      "description": "Adds a player to the server banlist, preventing them from joining.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/ban <player> [reason]",
+          "params": {
+            "player": "Player name to ban",
+            "reason": "Optional ban reason"
+          }
+        }
+      ],
+      "examples": [
+        "/ban Notch",
+        "/ban Player1 Breaking rules"
+      ],
+      "gamerules": []
+    },
+    {
+      "name": "ban-ip",
+      "description": "Adds an IP address to the server banlist.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/ban-ip <ip>",
+          "params": {
+            "ip": "IP address to ban"
+          }
+        }
+      ],
+      "examples": [
+        "/ban-ip 192.168.1.1"
+      ]
+    },
+    {
+      "name": "banlist",
+      "description": "Displays the server banlist.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/banlist [ips|players]",
+          "params": {
+            "ips": "List banned IPs",
+            "players": "List banned players"
+          }
+        }
+      ],
+      "examples": [
+        "/banlist",
+        "/banlist ips"
+      ]
+    },
+    {
+      "name": "deop",
+      "description": "Removes operator status from a player.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/deop <player>",
+          "params": {
+            "player": "Player to remove operator from"
+          }
+        }
+      ],
+      "examples": [
+        "/deop Notch"
+      ]
+    },
+    {
+      "name": "kick",
+      "description": "Kicks a player from the server with an optional reason.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/kick <player> [reason]",
+          "params": {
+            "player": "Player to kick",
+            "reason": "Optional kick reason"
+          }
+        }
+      ],
+      "examples": [
+        "/kick Player1",
+        "/kick Player1 Breaking rules"
+      ]
+    },
+    {
+      "name": "op",
+      "description": "Grants operator status to a player, allowing use of all commands.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/op <player>",
+          "params": {
+            "player": "Player to grant operator"
+          }
+        }
+      ],
+      "examples": [
+        "/op Notch"
+      ]
+    },
+    {
+      "name": "pardon",
+      "description": "Removes a player from the server banlist.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/pardon <player>",
+          "params": {
+            "player": "Player to unban"
+          }
+        }
+      ],
+      "examples": [
+        "/pardon Notch"
+      ]
+    },
+    {
+      "name": "say",
+      "description": "Sends a message to all players in chat via the server.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/say <message>",
+          "params": {
+            "message": "Message text to broadcast"
+          }
+        }
+      ],
+      "examples": [
+        "/say Hello everyone!",
+        "/say Server will restart in 5 minutes"
+      ]
+    },
+    {
+      "name": "tell",
+      "description": "Sends a private message to a specific player.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 0,
+      "multiplayer_only": false,
+      "aliases": [
+        "msg",
+        "w"
+      ],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/tell <player> <message>",
+          "params": {
+            "player": "Target player",
+            "message": "Private message"
+          }
+        }
+      ],
+      "examples": [
+        "/tell Notch Hello",
+        "/msg Player1 hi"
+      ]
+    },
+    {
+      "name": "whitelist",
+      "description": "Manages the server whitelist for joining players.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/whitelist <add|remove|list|on|off> [player]",
+          "params": {
+            "action": "add, remove, list, on, or off",
+            "player": "Player to add/remove"
+          }
+        }
+      ],
+      "examples": [
+        "/whitelist add Player1",
+        "/whitelist on",
+        "/whitelist list"
+      ]
+    }
+  ]
+}

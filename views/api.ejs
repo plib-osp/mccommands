@@ -1,0 +1,269 @@
+<style>
+  .api-hero { padding: 120px 0 60px; text-align: center; }
+  .api-hero-tag { display: inline-block; font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; }
+  .api-hero h1 { font-size: 56px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; }
+  .api-hero p { font-size: 16px; color: var(--muted); max-width: 520px; margin: 0 auto 32px; }
+
+  .api-section { padding: 40px 0; }
+  .endpoint {
+    border: 1px solid var(--border); margin-bottom: 16px; border-radius: 8px;
+    transition: border-color 0.2s; overflow: hidden;
+  }
+  .endpoint:hover { border-color: rgba(255,255,255,0.15); }
+  .endpoint-header {
+    display: flex; align-items: center; gap: 16px; padding: 20px 24px;
+    cursor: pointer; user-select: none;
+  }
+  .endpoint-method {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em; padding: 3px 10px;
+    border-radius: 4px; background: rgba(34,197,94,0.15); color: #22c55e; text-transform: uppercase; flex-shrink: 0;
+  }
+  .endpoint-path { font-size: 15px; font-weight: 500; font-family: var(--mono), 'SF Mono', 'Fira Code', monospace; letter-spacing: -0.02em; flex: 1; }
+  .endpoint-desc { font-size: 13px; color: var(--muted); }
+  .endpoint-body { padding: 0 24px 20px; display: none; }
+  .endpoint.open .endpoint-body { display: block; }
+  .endpoint-arrow { color: var(--muted); display: flex; align-items: center; transition: transform 0.2s; }
+  .endpoint.open .endpoint-arrow { transform: rotate(90deg); }
+  .endpoint-arrow svg { width: 16px; height: 16px; }
+
+  .try-box { margin-top: 16px; }
+  .try-box textarea {
+    width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    color: var(--fg); font-family: var(--mono), 'SF Mono', 'Fira Code', monospace; font-size: 13px;
+    padding: 12px 16px; border-radius: 6px; resize: vertical; min-height: 44px; outline: none;
+  }
+  .try-box textarea:focus { border-color: rgba(255,255,255,0.25); }
+  .try-row { display: flex; gap: 8px; align-items: stretch; margin-bottom: 12px; }
+  .try-input { flex: 1; }
+  .try-btn {
+    background: var(--fg); color: var(--bg); border: none; padding: 0 24px;
+    font-size: 13px; font-weight: 600; border-radius: 6px; cursor: pointer;
+    transition: opacity 0.2s; white-space: nowrap;
+  }
+  .try-btn:hover { opacity: 0.8; }
+  .try-response {
+    background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+    border-radius: 6px; padding: 16px; margin-top: 8px; display: none;
+    font-family: var(--mono), 'SF Mono', 'Fira Code', monospace; font-size: 12px; line-height: 1.5;
+    max-height: 300px; overflow: auto; white-space: pre-wrap; word-break: break-all;
+  }
+  .try-response.show { display: block; }
+
+  .curl-box {
+    background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+    border-radius: 6px; padding: 16px; margin-top: 12px; position: relative;
+  }
+  .curl-box code {
+    font-family: var(--mono), 'SF Mono', 'Fira Code', monospace; font-size: 12px;
+    color: #ccc; line-height: 1.6; display: block; white-space: pre-wrap;
+  }
+  .curl-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 8px;
+  }
+
+  .params-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .params-table th { text-align: left; font-weight: 600; color: var(--muted); padding: 8px 12px; border-bottom: 1px solid var(--border); font-size: 11px; letter-spacing: 0.03em; }
+  .params-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  .params-table tr:last-child td { border-bottom: none; }
+  .param-name { font-family: var(--mono), 'SF Mono', 'Fira Code', monospace; font-size: 12px; color: #22c55e; }
+  .param-type { font-size: 11px; color: var(--muted); background: rgba(255,255,255,0.06); padding: 1px 8px; border-radius: 3px; margin-left: 8px; }
+
+  @media (max-width: 768px) {
+    .api-hero h1 { font-size: 32px; }
+    .endpoint-header { flex-wrap: wrap; }
+    .endpoint-desc { width: 100%; }
+  }
+</style>
+
+<section class="api-hero">
+  <div class="container">
+    <span class="api-hero-tag">REST API</span>
+    <h1>MCCommands API</h1>
+    <p>Complete Minecraft command database for every version. Free, open, no authentication required.</p>
+  </div>
+</section>
+
+<section class="api-section">
+  <div class="container">
+
+    <div class="endpoint open" id="e-versions">
+      <div class="endpoint-header" onclick="toggleEndpoint(this.parentElement)">
+        <span class="endpoint-method" style="background:rgba(34,197,94,0.15);color:#22c55e">GET</span>
+        <span class="endpoint-path">/api/versions</span>
+        <span class="endpoint-desc">List all Minecraft versions</span>
+        <span class="endpoint-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </div>
+      <div class="endpoint-body">
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Optional <code style="color:#fff;">?era=alpha|beta|release</code> to filter by era.</p>
+        <table class="params-table">
+          <tr><th>Query Param</th><th>Type</th><th>Default</th><th>Description</th></tr>
+          <tr><td class="param-name">era</td><td><span class="param-type">string</span></td><td>all</td><td>Filter: <code>alpha</code>, <code>beta</code>, <code>release</code></td></tr>
+        </table>
+        <div class="curl-box">
+          <div class="curl-label">Examples</div>
+          <code>curl <%= appUrl %>/api/versions
+curl <%= appUrl %>/api/versions?era=release</code>
+        </div>
+        <div class="try-box">
+          <div class="try-row">
+            <input class="try-input" value="/api/versions" readonly style="flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--fg);font-family:'SF Mono',monospace;font-size:13px;padding:12px 16px;border-radius:6px;outline:none;">
+            <button class="try-btn" onclick="tryEndpoint('/api/versions','try-versions-resp')">Try it</button>
+          </div>
+          <div class="try-response" id="try-versions-resp"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="endpoint" id="e-version">
+      <div class="endpoint-header" onclick="toggleEndpoint(this.parentElement)">
+        <span class="endpoint-method" style="background:rgba(34,197,94,0.15);color:#22c55e">GET</span>
+        <span class="endpoint-path">/api/versions/:version</span>
+        <span class="endpoint-desc">Get a specific version with all commands</span>
+        <span class="endpoint-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </div>
+      <div class="endpoint-body">
+        <table class="params-table">
+          <tr><th>Path Param</th><th>Type</th><th>Description</th></tr>
+          <tr><td class="param-name">version</td><td><span class="param-type">string</span></td><td>e.g. <code>1.21</code>, <code>b1.8</code>, <code>v1.2.6</code></td></tr>
+        </table>
+        <div class="curl-box">
+          <div class="curl-label">Examples</div>
+          <code>curl <%= appUrl %>/api/versions/1.21.11
+curl <%= appUrl %>/api/versions/b1.8
+curl <%= appUrl %>/api/versions/v1.2.6</code>
+        </div>
+        <div class="try-box">
+          <div class="try-row">
+            <input class="try-input" value="/api/versions/1.21.11" style="flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--fg);font-family:'SF Mono',monospace;font-size:13px;padding:12px 16px;border-radius:6px;outline:none;">
+            <button class="try-btn" onclick="tryEndpoint(this.previousElementSibling.value,'try-version-resp')">Try it</button>
+          </div>
+          <div class="try-response" id="try-version-resp"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="endpoint" id="e-commands">
+      <div class="endpoint-header" onclick="toggleEndpoint(this.parentElement)">
+        <span class="endpoint-method" style="background:rgba(34,197,94,0.15);color:#22c55e">GET</span>
+        <span class="endpoint-path">/api/commands</span>
+        <span class="endpoint-desc">List all unique commands across all versions</span>
+        <span class="endpoint-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </div>
+      <div class="endpoint-body">
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Use <code style="color:#fff;">?search=query</code> to filter commands by name, description, or syntax.</p>
+        <table class="params-table">
+          <tr><th>Query Param</th><th>Type</th><th>Description</th></tr>
+          <tr><td class="param-name">search</td><td><span class="param-type">string</span></td><td>Search query to filter commands</td></tr>
+        </table>
+        <div class="curl-box">
+          <div class="curl-label">Examples</div>
+          <code>curl <%= appUrl %>/api/commands
+curl <%= appUrl %>/api/commands?search=gamerule</code>
+        </div>
+        <div class="try-box">
+          <div class="try-row">
+            <input class="try-input" value="/api/commands?search=fill" style="flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--fg);font-family:'SF Mono',monospace;font-size:13px;padding:12px 16px;border-radius:6px;outline:none;">
+            <button class="try-btn" onclick="tryEndpoint(this.previousElementSibling.value,'try-commands-resp')">Try it</button>
+          </div>
+          <div class="try-response" id="try-commands-resp"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="endpoint" id="e-command">
+      <div class="endpoint-header" onclick="toggleEndpoint(this.parentElement)">
+        <span class="endpoint-method" style="background:rgba(34,197,94,0.15);color:#22c55e">GET</span>
+        <span class="endpoint-path">/api/commands/:command</span>
+        <span class="endpoint-desc">Get full details for a specific command</span>
+        <span class="endpoint-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </div>
+      <div class="endpoint-body">
+        <table class="params-table">
+          <tr><th>Path Param</th><th>Type</th><th>Description</th></tr>
+          <tr><td class="param-name">command</td><td><span class="param-type">string</span></td><td>e.g. <code>gamerule</code>, <code>execute</code>, <code>scoreboard</code></td></tr>
+        </table>
+        <div class="curl-box">
+          <div class="curl-label">Examples</div>
+          <code>curl <%= appUrl %>/api/commands/gamerule
+curl <%= appUrl %>/api/commands/execute
+curl <%= appUrl %>/api/commands/scoreboard</code>
+        </div>
+        <div class="try-box">
+          <div class="try-row">
+            <input class="try-input" value="/api/commands/gamerule" style="flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--fg);font-family:'SF Mono',monospace;font-size:13px;padding:12px 16px;border-radius:6px;outline:none;">
+            <button class="try-btn" onclick="tryEndpoint(this.previousElementSibling.value,'try-command-resp')">Try it</button>
+          </div>
+          <div class="try-response" id="try-command-resp"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="endpoint" id="e-gamerules">
+      <div class="endpoint-header" onclick="toggleEndpoint(this.parentElement)">
+        <span class="endpoint-method" style="background:rgba(34,197,94,0.15);color:#22c55e">GET</span>
+        <span class="endpoint-path">/api/gamerules</span>
+        <span class="endpoint-desc">List all game rules with types and defaults</span>
+        <span class="endpoint-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </div>
+      <div class="endpoint-body">
+        <div class="curl-box">
+          <div class="curl-label">Example</div>
+          <code>curl <%= appUrl %>/api/gamerules</code>
+        </div>
+        <div class="try-box">
+          <div class="try-row">
+            <input class="try-input" value="/api/gamerules" readonly style="flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--fg);font-family:'SF Mono',monospace;font-size:13px;padding:12px 16px;border-radius:6px;outline:none;">
+            <button class="try-btn" onclick="tryEndpoint('/api/gamerules','try-gamerules-resp')">Try it</button>
+          </div>
+          <div class="try-response" id="try-gamerules-resp"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="endpoint" id="e-stats">
+      <div class="endpoint-header" onclick="toggleEndpoint(this.parentElement)">
+        <span class="endpoint-method" style="background:rgba(34,197,94,0.15);color:#22c55e">GET</span>
+        <span class="endpoint-path">/api/stats</span>
+        <span class="endpoint-desc">Database statistics</span>
+        <span class="endpoint-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </div>
+      <div class="endpoint-body">
+        <div class="curl-box">
+          <div class="curl-label">Example</div>
+          <code>curl <%= appUrl %>/api/stats</code>
+        </div>
+        <div class="try-box">
+          <div class="try-row">
+            <input class="try-input" value="/api/stats" readonly style="flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--fg);font-family:'SF Mono',monospace;font-size:13px;padding:12px 16px;border-radius:6px;outline:none;">
+            <button class="try-btn" onclick="tryEndpoint('/api/stats','try-stats-resp')">Try it</button>
+          </div>
+          <div class="try-response" id="try-stats-resp"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function toggleEndpoint(el) { el.classList.toggle('open'); }
+
+  async function tryEndpoint(path, respId) {
+    const btn = event?.target;
+    if (btn) { btn.textContent = 'Loading...'; btn.disabled = true; }
+    const resp = document.getElementById(respId);
+    resp.classList.add('show');
+    resp.textContent = 'Fetching...';
+    try {
+      const res = await fetch(path);
+      const data = await res.json();
+      resp.textContent = JSON.stringify(data, null, 2);
+    } catch (e) {
+      resp.textContent = 'Error: ' + e.message;
+    }
+    if (btn) { btn.textContent = 'Try it'; btn.disabled = false; }
+  }
+
+  setTimeout(() => tryEndpoint('/api/versions', 'try-versions-resp'), 300);
+</script>

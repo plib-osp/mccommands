@@ -1,0 +1,2760 @@
+{
+  "version": "1.20.6",
+  "type": "release",
+  "commands": [
+    {
+      "name": "ban",
+      "description": "Adds a player to the server banlist, preventing them from joining.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/ban <player> [reason]",
+          "params": {
+            "player": "Player name to ban",
+            "reason": "Optional ban reason"
+          }
+        }
+      ],
+      "examples": [
+        "/ban Notch",
+        "/ban Player1 Breaking rules"
+      ],
+      "gamerules": []
+    },
+    {
+      "name": "ban-ip",
+      "description": "Adds an IP address to the server banlist.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/ban-ip <ip>",
+          "params": {
+            "ip": "IP address to ban"
+          }
+        }
+      ],
+      "examples": [
+        "/ban-ip 192.168.1.1"
+      ]
+    },
+    {
+      "name": "banlist",
+      "description": "Displays the server banlist.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/banlist [ips|players]",
+          "params": {
+            "ips": "List banned IPs",
+            "players": "List banned players"
+          }
+        }
+      ],
+      "examples": [
+        "/banlist",
+        "/banlist ips"
+      ]
+    },
+    {
+      "name": "deop",
+      "description": "Removes operator status from a player.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/deop <player>",
+          "params": {
+            "player": "Player to remove operator from"
+          }
+        }
+      ],
+      "examples": [
+        "/deop Notch"
+      ]
+    },
+    {
+      "name": "kick",
+      "description": "Kicks a player from the server with an optional reason.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/kick <player> [reason]",
+          "params": {
+            "player": "Player to kick",
+            "reason": "Optional kick reason"
+          }
+        }
+      ],
+      "examples": [
+        "/kick Player1",
+        "/kick Player1 Breaking rules"
+      ]
+    },
+    {
+      "name": "op",
+      "description": "Grants operator status to a player, allowing use of all commands.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/op <player>",
+          "params": {
+            "player": "Player to grant operator"
+          }
+        }
+      ],
+      "examples": [
+        "/op Notch"
+      ]
+    },
+    {
+      "name": "pardon",
+      "description": "Removes a player from the server banlist.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/pardon <player>",
+          "params": {
+            "player": "Player to unban"
+          }
+        }
+      ],
+      "examples": [
+        "/pardon Notch"
+      ]
+    },
+    {
+      "name": "pardon-ip",
+      "description": "Removes an IP address from the server banlist.",
+      "introduced": "Beta 1.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.0+",
+          "pattern": "/pardon-ip <ip>",
+          "params": {
+            "ip": "IP address to unban"
+          }
+        }
+      ],
+      "examples": [
+        "/pardon-ip 192.168.1.1"
+      ]
+    },
+    {
+      "name": "say",
+      "description": "Sends a message to all players in chat via the server.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/say <message>",
+          "params": {
+            "message": "Message text to broadcast"
+          }
+        }
+      ],
+      "examples": [
+        "/say Hello everyone!",
+        "/say Server will restart in 5 minutes"
+      ]
+    },
+    {
+      "name": "tell",
+      "description": "Sends a private message to a specific player.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 0,
+      "multiplayer_only": false,
+      "aliases": [
+        "msg",
+        "w"
+      ],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/tell <player> <message>",
+          "params": {
+            "player": "Target player",
+            "message": "Private message"
+          }
+        }
+      ],
+      "examples": [
+        "/tell Notch Hello",
+        "/msg Player1 hi"
+      ]
+    },
+    {
+      "name": "whitelist",
+      "description": "Manages the server whitelist for joining players.",
+      "introduced": "Alpha v1.0.0",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.0+",
+          "pattern": "/whitelist <add|remove|list|on|off> [player]",
+          "params": {
+            "action": "add, remove, list, on, or off",
+            "player": "Player to add/remove"
+          }
+        }
+      ],
+      "examples": [
+        "/whitelist add Player1",
+        "/whitelist on",
+        "/whitelist list"
+      ]
+    },
+    {
+      "name": "give",
+      "description": "Gives an item to a player. The most commonly used command for spawning items.",
+      "introduced": "Alpha v1.0.16",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.0.16 - 1.5",
+          "pattern": "/give <player> <id> [count] [data]",
+          "params": {
+            "player": "Target player",
+            "id": "Numeric item ID",
+            "count": "Number of items (default 1)",
+            "data": "Damage value (default 0)"
+          }
+        },
+        {
+          "version_range": "Release 1.6+",
+          "pattern": "/give <player> <item> [count] [data] [nbt]",
+          "params": {
+            "player": "Target",
+            "item": "Item name or ID",
+            "count": "Amount",
+            "data": "Damage value",
+            "nbt": "NBT compound tag"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/give <targets> <item> [count]",
+          "params": {
+            "targets": "Target selector",
+            "item": "Namespaced item ID",
+            "count": "Number of items"
+          }
+        }
+      ],
+      "examples": [
+        "/give Player1 diamond",
+        "/give @p minecraft:diamond_sword 1",
+        "/give @a minecraft:arrow 64"
+      ],
+      "gamerules": []
+    },
+    {
+      "name": "kill",
+      "description": "Kills entities. In Alpha/Beta it killed the executor with 1000 damage. From 1.13+ can target any entity.",
+      "introduced": "Alpha v1.2.6",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Alpha v1.2.6 - 1.12",
+          "pattern": "/kill",
+          "params": {},
+          "description_extra": "Kills the executor"
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/kill [targets]",
+          "params": {
+            "targets": "Entities to kill (defaults to executor)"
+          }
+        }
+      ],
+      "examples": [
+        "/kill",
+        "/kill @e[type=!player]"
+      ],
+      "gamerules": []
+    },
+    {
+      "name": "gamemode",
+      "description": "Sets a player's game mode (survival, creative, adventure, or spectator).",
+      "introduced": "Beta 1.0",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [
+        "gm"
+      ],
+      "syntax": [
+        {
+          "version_range": "Beta 1.0 - 1.12",
+          "pattern": "/gamemode <mode> [player]",
+          "params": {
+            "mode": "survival/creative/adventure or 0/1/2",
+            "player": "Target player (default self)"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/gamemode <gamemode> [targets]",
+          "params": {
+            "gamemode": "survival/creative/adventure/spectator",
+            "targets": "Target selector"
+          }
+        }
+      ],
+      "examples": [
+        "/gamemode creative",
+        "/gamemode survival Player1",
+        "/gamemode 1 @a"
+      ]
+    },
+    {
+      "name": "difficulty",
+      "description": "Sets or queries the game difficulty level.",
+      "introduced": "Beta 1.3",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.3 - 1.12",
+          "pattern": "/difficulty <peaceful|easy|normal|hard>",
+          "params": {
+            "difficulty": "New difficulty level"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/difficulty [difficulty]",
+          "params": {
+            "difficulty": "Optional - query current if omitted"
+          }
+        }
+      ],
+      "examples": [
+        "/difficulty peaceful",
+        "/difficulty hard"
+      ]
+    },
+    {
+      "name": "defaultgamemode",
+      "description": "Sets the default game mode for new players joining the server.",
+      "introduced": "Beta 1.4",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.4+",
+          "pattern": "/defaultgamemode <survival|creative|adventure>",
+          "params": {
+            "mode": "Default game mode"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/defaultgamemode <gamemode>",
+          "params": {
+            "gamemode": "Default mode"
+          }
+        }
+      ],
+      "examples": [
+        "/defaultgamemode survival"
+      ]
+    },
+    {
+      "name": "save-all",
+      "description": "Saves the server world to disk immediately.",
+      "introduced": "Beta 1.3",
+      "removed": null,
+      "permission_level": 4,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.3+",
+          "pattern": "/save-all [flush]",
+          "params": {
+            "flush": "Force immediate save"
+          }
+        }
+      ],
+      "examples": [
+        "/save-all",
+        "/save-all flush"
+      ]
+    },
+    {
+      "name": "save-off",
+      "description": "Disables automatic world saving on the server.",
+      "introduced": "Beta 1.3",
+      "removed": null,
+      "permission_level": 4,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.3+",
+          "pattern": "/save-off",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/save-off"
+      ]
+    },
+    {
+      "name": "save-on",
+      "description": "Re-enables automatic world saving on the server.",
+      "introduced": "Beta 1.3",
+      "removed": null,
+      "permission_level": 4,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.3+",
+          "pattern": "/save-on",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/save-on"
+      ]
+    },
+    {
+      "name": "stop",
+      "description": "Stops the server and saves all data.",
+      "introduced": "Beta 1.3",
+      "removed": null,
+      "permission_level": 4,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.3+",
+          "pattern": "/stop",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/stop"
+      ]
+    },
+    {
+      "name": "tp",
+      "description": "Teleports players to coordinates or to other entities. Alias: /teleport (1.8+)",
+      "introduced": "Beta 1.5",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [
+        "teleport"
+      ],
+      "syntax": [
+        {
+          "version_range": "Beta 1.5 - 1.12",
+          "pattern": "/tp <player> [target|x y z]",
+          "params": {
+            "player": "Player to teleport",
+            "target": "Destination player",
+            "x y z": "Destination coordinates"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/tp [targets] <destination> [yRot] [xRot]",
+          "params": {
+            "targets": "Entities to teleport",
+            "destination": "Entity destination",
+            "yRot": "Facing rotation Y",
+            "xRot": "Facing rotation X"
+          }
+        }
+      ],
+      "examples": [
+        "/tp Player1 100 64 100",
+        "/tp @p @r"
+      ]
+    },
+    {
+      "name": "clear",
+      "description": "Clears items from a player's inventory with optional filtering.",
+      "introduced": "Beta 1.7",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.7 - 1.12",
+          "pattern": "/clear <player> [item] [data] [maxCount]",
+          "params": {
+            "player": "Target player",
+            "item": "Item to remove (omit for all)",
+            "data": "Damage value filter",
+            "maxCount": "Max items to clear"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/clear [targets] [item] [maxCount]",
+          "params": {
+            "targets": "Target selector",
+            "item": "Item to clear",
+            "maxCount": "Maximum count"
+          }
+        }
+      ],
+      "examples": [
+        "/clear Player1",
+        "/clear @p minecraft:diamond 64"
+      ]
+    },
+    {
+      "name": "gamerule",
+      "description": "Sets or queries game rules that control world behavior.",
+      "introduced": "Beta 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.8+",
+          "pattern": "/gamerule <rule> [value]",
+          "params": {
+            "rule": "Game rule name",
+            "value": "New value (omit to query)"
+          }
+        }
+      ],
+      "examples": [
+        "/gamerule keepInventory true",
+        "/gamerule doDaylightCycle false"
+      ],
+      "gamerules": [
+        {
+          "rule": "doFireTick",
+          "type": "bool",
+          "default": true,
+          "description": "Whether fire spreads and naturally extinguishes"
+        },
+        {
+          "rule": "doMobLoot",
+          "type": "bool",
+          "default": true,
+          "description": "Whether mobs drop items"
+        },
+        {
+          "rule": "doMobSpawning",
+          "type": "bool",
+          "default": true,
+          "description": "Whether mobs spawn naturally"
+        },
+        {
+          "rule": "doTileDrops",
+          "type": "bool",
+          "default": true,
+          "description": "Whether blocks drop items when broken"
+        },
+        {
+          "rule": "keepInventory",
+          "type": "bool",
+          "default": false,
+          "description": "Whether players keep inventory after death"
+        },
+        {
+          "rule": "mobGriefing",
+          "type": "bool",
+          "default": true,
+          "description": "Whether mobs can change blocks (trample crops, break doors)"
+        },
+        {
+          "rule": "commandBlockOutput",
+          "type": "bool",
+          "default": true,
+          "description": "Whether command blocks broadcast output to chat"
+        },
+        {
+          "rule": "naturalRegeneration",
+          "type": "bool",
+          "default": true,
+          "description": "Whether players regenerate health naturally (1.0+)"
+        },
+        {
+          "rule": "doDaylightCycle",
+          "type": "bool",
+          "default": true,
+          "description": "Whether the day-night cycle progresses (1.0+)"
+        },
+        {
+          "rule": "logAdminCommands",
+          "type": "bool",
+          "default": true,
+          "description": "Whether admin commands are logged (1.0+)"
+        },
+        {
+          "rule": "showDeathMessages",
+          "type": "bool",
+          "default": true,
+          "description": "Whether death messages appear in chat (1.0+)"
+        },
+        {
+          "rule": "randomTickSpeed",
+          "type": "int",
+          "default": 3,
+          "description": "Random block ticks per chunk per tick (1.0+)"
+        },
+        {
+          "rule": "sendCommandFeedback",
+          "type": "bool",
+          "default": true,
+          "description": "Whether command feedback is sent (1.0+)"
+        },
+        {
+          "rule": "reducedDebugInfo",
+          "type": "bool",
+          "default": false,
+          "description": "Whether F3 debug screen is reduced (1.0+)"
+        },
+        {
+          "rule": "doEntityDrops",
+          "type": "bool",
+          "default": true,
+          "description": "Whether entities drop items (1.8+)"
+        },
+        {
+          "rule": "doWeatherCycle",
+          "type": "bool",
+          "default": true,
+          "description": "Whether weather changes naturally (1.0+)"
+        },
+        {
+          "rule": "maxEntityCramming",
+          "type": "int",
+          "default": 24,
+          "description": "Max entities in one block before damage (1.11+)"
+        },
+        {
+          "rule": "doLimitedCrafting",
+          "type": "bool",
+          "default": false,
+          "description": "Whether players can only craft unlocked recipes (1.12+)"
+        },
+        {
+          "rule": "maxCommandChainLength",
+          "type": "int",
+          "default": 65536,
+          "description": "Max command chain length (1.10+)"
+        },
+        {
+          "rule": "announceAdvancements",
+          "type": "bool",
+          "default": true,
+          "description": "Whether advancements are announced in chat (1.12+)"
+        },
+        {
+          "rule": "disableRaids",
+          "type": "bool",
+          "default": false,
+          "description": "Whether raids are disabled (1.14.4+)"
+        },
+        {
+          "rule": "doInsomnia",
+          "type": "bool",
+          "default": true,
+          "description": "Whether phantoms spawn from insomnia (1.13+)"
+        },
+        {
+          "rule": "doImmediateRespawn",
+          "type": "bool",
+          "default": false,
+          "description": "Whether players respawn immediately (1.15+)"
+        },
+        {
+          "rule": "drowningDamage",
+          "type": "bool",
+          "default": true,
+          "description": "Whether drowning damage is dealt (1.13+)"
+        },
+        {
+          "rule": "fallDamage",
+          "type": "bool",
+          "default": true,
+          "description": "Whether fall damage is dealt (1.13+)"
+        },
+        {
+          "rule": "fireDamage",
+          "type": "bool",
+          "default": true,
+          "description": "Whether fire damage is dealt (1.13+)"
+        },
+        {
+          "rule": "doPatrolSpawning",
+          "type": "bool",
+          "default": true,
+          "description": "Whether pillager patrols spawn (1.14+)"
+        },
+        {
+          "rule": "doTraderSpawning",
+          "type": "bool",
+          "default": true,
+          "description": "Whether wandering traders spawn (1.14+)"
+        },
+        {
+          "rule": "forgiveDeadPlayers",
+          "type": "bool",
+          "default": true,
+          "description": "Whether angry neutral mobs forgive dead players (1.16+)"
+        },
+        {
+          "rule": "universalAnger",
+          "type": "bool",
+          "default": false,
+          "description": "Whether angered neutral mobs attack any player (1.16+)"
+        },
+        {
+          "rule": "playersSleepingPercentage",
+          "type": "int",
+          "default": 100,
+          "description": "Percentage of players to sleep to skip night (1.15+)"
+        },
+        {
+          "rule": "doVinesSpread",
+          "type": "bool",
+          "default": true,
+          "description": "Whether vines spread (1.19+)"
+        },
+        {
+          "rule": "spawnChunkRadius",
+          "type": "int",
+          "default": 2,
+          "description": "Spawn chunk radius in chunks (1.18+)"
+        },
+        {
+          "rule": "blockExplosionDropDecay",
+          "type": "bool",
+          "default": true,
+          "description": "Whether block explosions drop loot with decay (1.20+)"
+        },
+        {
+          "rule": "mobExplosionDropDecay",
+          "type": "bool",
+          "default": true,
+          "description": "Whether mob explosion drops have decay (1.20+)"
+        },
+        {
+          "rule": "tntExplosionDropDecay",
+          "type": "bool",
+          "default": false,
+          "description": "Whether TNT explosion drops have decay (1.20+)"
+        },
+        {
+          "rule": "snowAccumulationHeight",
+          "type": "int",
+          "default": 1,
+          "description": "Max snow layer height from snowfall (1.20+)"
+        },
+        {
+          "rule": "doWardenSpawning",
+          "type": "bool",
+          "default": true,
+          "description": "Whether wardens can spawn (1.19+)"
+        },
+        {
+          "rule": "commandModificationBlockLimit",
+          "type": "int",
+          "default": 32768,
+          "description": "Max blocks modified by a single command (1.19.4+)"
+        },
+        {
+          "rule": "enderPearlsVanishOnDeath",
+          "type": "bool",
+          "default": true,
+          "description": "Whether ender pearls vanish on thrower death (1.20+)"
+        },
+        {
+          "rule": "projectilesCanBreakBlocks",
+          "type": "bool",
+          "default": false,
+          "description": "Whether projectiles can break blocks (1.20+)"
+        }
+      ]
+    },
+    {
+      "name": "seed",
+      "description": "Displays the world seed number.",
+      "introduced": "Beta 1.8",
+      "removed": null,
+      "permission_level": 0,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.8+",
+          "pattern": "/seed",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/seed"
+      ]
+    },
+    {
+      "name": "spawnpoint",
+      "description": "Sets the spawn point for a player at specified coordinates.",
+      "introduced": "Beta 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.8+",
+          "pattern": "/spawnpoint [player] [x] [y] [z]",
+          "params": {
+            "player": "Target player (default self)",
+            "x y z": "Spawn coordinates (current pos if omitted)"
+          }
+        }
+      ],
+      "examples": [
+        "/spawnpoint",
+        "/spawnpoint Player1 100 64 100"
+      ]
+    },
+    {
+      "name": "time",
+      "description": "Changes or queries the world game time.",
+      "introduced": "Beta 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.8 - 1.12",
+          "pattern": "/time <set|add|query> <value>",
+          "params": {
+            "operation": "set, add, or query",
+            "value": "Time (0-24000) or day/night/noon/midnight"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/time <add|query|set> <value>",
+          "params": {
+            "operation": "add/query/set",
+            "value": "Time value or day/night/noon/midnight"
+          }
+        }
+      ],
+      "examples": [
+        "/time set day",
+        "/time set 6000",
+        "/time add 1000",
+        "/time query daytime"
+      ]
+    },
+    {
+      "name": "toggledownfall",
+      "description": "Toggles the weather between clear and rainy/snowy. Replaced by /weather in Beta 1.8.",
+      "introduced": "Beta 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.8+",
+          "pattern": "/toggledownfall",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/toggledownfall"
+      ]
+    },
+    {
+      "name": "xp",
+      "description": "Adds, sets, or queries player experience. From 1.8+ can use /experience.",
+      "introduced": "Beta 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [
+        "experience"
+      ],
+      "syntax": [
+        {
+          "version_range": "Beta 1.8 - 1.12",
+          "pattern": "/xp <amount> [player]",
+          "params": {
+            "amount": "Experience points to add",
+            "player": "Target player (default self)"
+          }
+        },
+        {
+          "version_range": "Release 1.8+",
+          "pattern": "/xp <amount|L level> [player]",
+          "params": {
+            "amount": "Points, or L prefix for levels",
+            "player": "Target player"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/xp <add|set|query> <targets> <amount>",
+          "params": {
+            "operation": "add/set/query",
+            "targets": "Target",
+            "amount": "XP amount"
+          }
+        }
+      ],
+      "examples": [
+        "/xp 100",
+        "/xp 10L Player1"
+      ]
+    },
+    {
+      "name": "weather",
+      "description": "Sets the weather with optional duration.",
+      "introduced": "Beta 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "Beta 1.8+",
+          "pattern": "/weather <clear|rain|thunder> [duration]",
+          "params": {
+            "type": "clear, rain, or thunder",
+            "duration": "Duration in seconds (optional)"
+          }
+        }
+      ],
+      "examples": [
+        "/weather clear",
+        "/weather rain 600",
+        "/weather thunder"
+      ]
+    },
+    {
+      "name": "enchant",
+      "description": "Enchants the item a player is holding.",
+      "introduced": "Release 1.0.0",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.0.0 - 1.12",
+          "pattern": "/enchant <player> <enchantmentId> [level]",
+          "params": {
+            "player": "Target player",
+            "enchantmentId": "Enchantment ID number",
+            "level": "Enchantment level (default 1)"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/enchant <targets> <enchantment> [level]",
+          "params": {
+            "targets": "Target selector",
+            "enchantment": "Enchantment ID",
+            "level": "Enchantment level"
+          }
+        }
+      ],
+      "examples": [
+        "/enchant Player1 16 3",
+        "/enchant @p sharpness 5"
+      ]
+    },
+    {
+      "name": "help",
+      "description": "Provides command help and lists available commands.",
+      "introduced": "Release 1.0.0",
+      "removed": null,
+      "permission_level": 0,
+      "multiplayer_only": false,
+      "aliases": [
+        "?"
+      ],
+      "syntax": [
+        {
+          "version_range": "1.0.0+",
+          "pattern": "/help [page|command]",
+          "params": {
+            "page": "Help page number",
+            "command": "Command name for specific help"
+          }
+        }
+      ],
+      "examples": [
+        "/help",
+        "/help 3",
+        "/help give"
+      ]
+    },
+    {
+      "name": "me",
+      "description": "Displays an action message in chat in third person.",
+      "introduced": "Release 1.3.1",
+      "removed": null,
+      "permission_level": 0,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.3.1+",
+          "pattern": "/me <action>",
+          "params": {
+            "action": "Action text to display"
+          }
+        }
+      ],
+      "examples": [
+        "/me waves hello",
+        "/me throws a potion"
+      ]
+    },
+    {
+      "name": "publish",
+      "description": "Opens a singleplayer world to the local network (LAN).",
+      "introduced": "Release 1.3.1",
+      "removed": null,
+      "permission_level": 4,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.3.1+",
+          "pattern": "/publish [port]",
+          "params": {
+            "port": "Port number (default 25565)"
+          }
+        }
+      ],
+      "examples": [
+        "/publish",
+        "/publish 25566"
+      ]
+    },
+    {
+      "name": "debug",
+      "description": "Starts or stops debugging and profiling.",
+      "introduced": "Release 1.3.1",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.3.1+",
+          "pattern": "/debug <start|stop|function>",
+          "params": {
+            "action": "start/stop/function",
+            "function": "Function target for function profiling"
+          }
+        }
+      ],
+      "examples": [
+        "/debug start",
+        "/debug stop"
+      ]
+    },
+    {
+      "name": "setidletimeout",
+      "description": "Sets the idle timeout before players are kicked from the server.",
+      "introduced": "Release 1.4.2",
+      "removed": null,
+      "permission_level": 4,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.4.2+",
+          "pattern": "/setidletimeout <minutes>",
+          "params": {
+            "minutes": "Timeout in minutes (0 to disable)"
+          }
+        }
+      ],
+      "examples": [
+        "/setidletimeout 15",
+        "/setidletimeout 0"
+      ]
+    },
+    {
+      "name": "list",
+      "description": "Lists all players currently connected to the server.",
+      "introduced": "Release 1.4.2",
+      "removed": null,
+      "permission_level": 0,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.4.2+",
+          "pattern": "/list [uuids]",
+          "params": {
+            "uuids": "Show UUIDs with player names (optional)"
+          }
+        }
+      ],
+      "examples": [
+        "/list",
+        "/list uuids"
+      ]
+    },
+    {
+      "name": "effect",
+      "description": "Adds or removes status effects on entities.",
+      "introduced": "Release 1.4.2",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.4.2 - 1.12",
+          "pattern": "/effect <player> <effect> [seconds] [amplifier] [hideParticles]",
+          "params": {
+            "player": "Target player",
+            "effect": "Effect name or ID",
+            "seconds": "Duration (default 30)",
+            "amplifier": "Amplifier level (0=1)",
+            "hideParticles": "true/false"
+          }
+        },
+        {
+          "version_range": "1.4.2 - 1.12",
+          "pattern": "/effect <player> clear",
+          "params": {
+            "player": "Target player",
+            "clear": "Remove all effects"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/effect <give|clear> <targets> <effect> [seconds] [amplifier] [hideParticles]",
+          "params": {
+            "action": "give or clear",
+            "targets": "Target selector",
+            "effect": "Effect ID",
+            "seconds": "Duration",
+            "amplifier": "Amplifier",
+            "hideParticles": "Hide particle effects"
+          }
+        }
+      ],
+      "examples": [
+        "/effect Player1 speed 30 2",
+        "/effect @a clear",
+        "/effect give @p minecraft:regeneration 60 1 true"
+      ]
+    },
+    {
+      "name": "scoreboard",
+      "description": "Manages scoreboard objectives and player scores. The core system for tracking data.",
+      "introduced": "Release 1.5",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.5+",
+          "pattern": "/scoreboard objectives <list|add|remove|setdisplay|modify> ...",
+          "params": {
+            "objectives": "Manage objective definitions"
+          }
+        },
+        {
+          "version_range": "1.5+",
+          "pattern": "/scoreboard players <list|set|add|remove|reset|enable|test|operation> ...",
+          "params": {
+            "players": "Manage player scores"
+          }
+        },
+        {
+          "version_range": "1.5+",
+          "pattern": "/scoreboard objectives add <name> <criteria> [displayName]",
+          "params": {
+            "name": "Objective name",
+            "criteria": "dummy/deathCount/playerKillCount/totalKillCount/health/trigger/teamkill/\u76d4\u7532/stat.*/achievement.*",
+            "displayName": "JSON display name"
+          }
+        },
+        {
+          "version_range": "1.5+",
+          "pattern": "/scoreboard players set <player> <objective> <score>",
+          "params": {
+            "player": "Player/entity name or selector",
+            "objective": "Objective name",
+            "score": "Score value"
+          }
+        },
+        {
+          "version_range": "1.5+",
+          "pattern": "/scoreboard players add <player> <objective> <score>",
+          "params": {
+            "player": "Player",
+            "objective": "Objective",
+            "score": "Amount to add"
+          }
+        },
+        {
+          "version_range": "1.5+",
+          "pattern": "/scoreboard players remove <player> <objective> <score>",
+          "params": {
+            "player": "Player",
+            "objective": "Objective",
+            "score": "Amount to subtract"
+          }
+        },
+        {
+          "version_range": "1.5+",
+          "pattern": "/scoreboard players reset <player> [objective]",
+          "params": {
+            "player": "Player to reset",
+            "objective": "Optional specific objective"
+          }
+        },
+        {
+          "version_range": "1.5+",
+          "pattern": "/scoreboard objectives setdisplay <slot> [objective]",
+          "params": {
+            "slot": "list/sidebar/belowName",
+            "objective": "Objective to display"
+          }
+        }
+      ],
+      "examples": [
+        "/scoreboard objectives add kills deathCount",
+        "/scoreboard players set @p kills 10",
+        "/scoreboard objectives setdisplay sidebar kills",
+        "/scoreboard players add @p kills 1"
+      ]
+    },
+    {
+      "name": "trigger",
+      "description": "Sets a trigger objective that non-operator players can activate.",
+      "introduced": "Release 1.5",
+      "removed": null,
+      "permission_level": 0,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.5+",
+          "pattern": "/trigger <objective> [add|set] [value]",
+          "params": {
+            "objective": "Trigger objective name",
+            "operation": "add (default) or set",
+            "value": "Value to modify (default 1)"
+          }
+        }
+      ],
+      "examples": [
+        "/trigger MyTrigger",
+        "/trigger MyTrigger set 5"
+      ]
+    },
+    {
+      "name": "tellraw",
+      "description": "Sends a JSON-formatted rich text message to players.",
+      "introduced": "Release 1.6.1",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.6.1+",
+          "pattern": "/tellraw <player> <message>",
+          "params": {
+            "player": "Target player/selector",
+            "message": "Raw JSON text component"
+          }
+        }
+      ],
+      "examples": [
+        "/tellraw @a {\"text\":\"Hello!\",\"color\":\"green\"}",
+        "/tellraw @p [\"\",{\"text\":\"Click \",\"color\":\"gray\"},{\"text\":\"HERE\",\"color\":\"yellow\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/help\"}}]"
+      ]
+    },
+    {
+      "name": "playsound",
+      "description": "Plays a sound effect to players.",
+      "introduced": "Release 1.6.1",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.6.1 - 1.12",
+          "pattern": "/playsound <sound> <player> [x] [y] [z] [volume] [pitch]",
+          "params": {
+            "sound": "Sound name",
+            "player": "Target player",
+            "x y z": "Sound source coordinates",
+            "volume": "Volume (0-1)",
+            "pitch": "Pitch (0.5-2.0)"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/playsound <sound> <source> <targets> [pos] [volume] [pitch] [minVolume]",
+          "params": {
+            "sound": "Sound ID",
+            "source": "Sound category (master/music/record/etc)",
+            "targets": "Target selector",
+            "pos": "Position",
+            "volume": "Volume",
+            "pitch": "Pitch",
+            "minVolume": "Min volume"
+          }
+        }
+      ],
+      "examples": [
+        "/playsound minecraft:entity.ender_dragon.death @a",
+        "/playsound minecraft:block.note_block.pling @p ~ ~ ~ 1 2"
+      ]
+    },
+    {
+      "name": "spreadplayers",
+      "description": "Teleports entities randomly across a specified area.",
+      "introduced": "Release 1.6.1",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.6.1+",
+          "pattern": "/spreadplayers <x> <z> <spreadDistance> <maxRange> <under> <targets>",
+          "params": {
+            "x z": "Center",
+            "spreadDistance": "Min distance between entities",
+            "maxRange": "Max spread range",
+            "under": "true/false respect non-solid",
+            "targets": "Entities to spread"
+          }
+        }
+      ],
+      "examples": [
+        "/spreadplayers 0 0 10 100 false @a"
+      ]
+    },
+    {
+      "name": "setblock",
+      "description": "Changes a single block at specified coordinates to another block type.",
+      "introduced": "Release 1.7.2",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.7.2 - 1.12",
+          "pattern": "/setblock <x> <y> <z> <block> [data] [destroy|keep|replace]",
+          "params": {
+            "x y z": "Block coordinates",
+            "block": "Block name or ID",
+            "data": "Block data value",
+            "mode": "destroy/keep/replace (default replace)"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/setblock <pos> <block> [destroy|keep|replace]",
+          "params": {
+            "pos": "Block position (x y z)",
+            "block": "Namespaced block ID",
+            "mode": "destroy/keep/replace"
+          }
+        }
+      ],
+      "examples": [
+        "/setblock ~ ~1 ~ minecraft:diamond_block",
+        "/setblock 100 64 100 stone destroy"
+      ]
+    },
+    {
+      "name": "fill",
+      "description": "Fills a region with a specific block type.",
+      "introduced": "Release 1.7.2",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.7.2 - 1.12",
+          "pattern": "/fill <x1> <y1> <z1> <x2> <y2> <z2> <block> [data] [destroy|hollow|keep|outline|replace]",
+          "params": {
+            "x1 y1 z1 x2 y2 z2": "Opposite corners of region",
+            "block": "Block to fill with",
+            "data": "Block data",
+            "mode": "Fill mode"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/fill <from> <to> <block> [destroy|hollow|keep|outline|replace]",
+          "params": {
+            "from": "Start position",
+            "to": "End position",
+            "block": "Block ID",
+            "mode": "Fill mode"
+          }
+        }
+      ],
+      "examples": [
+        "/fill 0 0 0 10 10 10 stone",
+        "/fill ~-5 ~-5 ~-5 ~5 ~5 ~5 air destroy"
+      ]
+    },
+    {
+      "name": "summon",
+      "description": "Summons an entity at specified coordinates.",
+      "introduced": "Release 1.7.2",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.7.2 - 1.12",
+          "pattern": "/summon <entity> [x] [y] [z] [data]",
+          "params": {
+            "entity": "Entity name or ID",
+            "x y z": "Spawn coordinates",
+            "data": "NBT data"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/summon <entity> [pos] [nbt]",
+          "params": {
+            "entity": "Namespaced entity ID",
+            "pos": "Spawn position",
+            "nbt": "NBT compound data"
+          }
+        }
+      ],
+      "examples": [
+        "/summon Zombie",
+        "/summon minecraft:wither 0 50 0 {Invulnerable:1}"
+      ]
+    },
+    {
+      "name": "setworldspawn",
+      "description": "Sets the world spawn point for all players.",
+      "introduced": "Release 1.7.2",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.7.2+",
+          "pattern": "/setworldspawn [x] [y] [z]",
+          "params": {
+            "x y z": "Spawn coordinates (default current position)"
+          }
+        }
+      ],
+      "examples": [
+        "/setworldspawn 100 64 100"
+      ]
+    },
+    {
+      "name": "clone",
+      "description": "Copies blocks from one region to another.",
+      "introduced": "Release 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.8 - 1.12",
+          "pattern": "/clone <x1> <y1> <z1> <x2> <y2> <z2> <x> <y> <z> [mask] [cloneMode] [tileName]",
+          "params": {
+            "x1 y1 z1 x2 y2 z2": "Source region",
+            "x y z": "Destination",
+            "mask": "filtered/masked/replace",
+            "cloneMode": "force/move/normal"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/clone [from] [to] [dest] [mask] [cloneMode]",
+          "params": {
+            "from": "Source region start",
+            "to": "Source region end",
+            "dest": "Destination position",
+            "mask": "filtered/masked/replace",
+            "cloneMode": "force/move/normal"
+          }
+        }
+      ],
+      "examples": [
+        "/clone 0 0 0 10 10 10 20 0 0",
+        "/clone 0 0 0 5 5 5 ~ ~ ~ masked move"
+      ]
+    },
+    {
+      "name": "stopsound",
+      "description": "Stops playing sounds for players.",
+      "introduced": "Release 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.8+",
+          "pattern": "/stopsound <player> [source] [sound]",
+          "params": {
+            "player": "Target player",
+            "source": "Sound source (* for all)",
+            "sound": "Specific sound to stop"
+          }
+        }
+      ],
+      "examples": [
+        "/stopsound @a",
+        "/stopsound @p * minecraft:entity.ender_dragon.death"
+      ]
+    },
+    {
+      "name": "particle",
+      "description": "Creates particle effects at a location.",
+      "introduced": "Release 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.8 - 1.12",
+          "pattern": "/particle <name> [x] [y] [z] [xd] [yd] [zd] [speed] [count] [mode] [player]",
+          "params": {
+            "name": "Particle name",
+            "x y z": "Center",
+            "xd yd zd": "Spread",
+            "speed": "Speed",
+            "count": "Count",
+            "mode": "force/normal",
+            "player": "Viewer"
+          }
+        },
+        {
+          "version_range": "Release 1.13+",
+          "pattern": "/particle <name> [pos] [delta] [speed] [count] [force|normal] [players]",
+          "params": {
+            "name": "Particle ID",
+            "pos": "Position",
+            "delta": "Spread",
+            "speed": "Speed",
+            "count": "Count",
+            "mode": "force/normal",
+            "players": "Viewers"
+          }
+        }
+      ],
+      "examples": [
+        "/particle minecraft:flame ~ ~1 ~ 0 0 0 0.1 10",
+        "/particle minecraft:dust 1 0 0 1 ~ ~1 ~ 0 0 0 1 50"
+      ]
+    },
+    {
+      "name": "title",
+      "description": "Displays a title, subtitle, or actionbar text on players screens.",
+      "introduced": "Release 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.8+",
+          "pattern": "/title <player> <title|subtitle|actionbar|times|clear|reset> [value]",
+          "params": {
+            "player": "Target player",
+            "type": "title/subtitle/actionbar/times/clear/reset",
+            "value": "JSON text or time: fadeIn stay fadeOut"
+          }
+        }
+      ],
+      "examples": [
+        "/title @a title {\"text\":\"Boss Fight!\"}",
+        "/title @a subtitle {\"text\":\"Get Ready\"}",
+        "/title @a times 10 70 20"
+      ]
+    },
+    {
+      "name": "team",
+      "description": "Manages entity teams and their properties like color, friendly fire, etc.",
+      "introduced": "Release 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.8+",
+          "pattern": "/team <list|add|remove|empty|join|leave|modify> ...",
+          "params": {}
+        },
+        {
+          "version_range": "1.8+",
+          "pattern": "/team add <team> [displayName]",
+          "params": {
+            "team": "Team name",
+            "displayName": "JSON display name"
+          }
+        },
+        {
+          "version_range": "1.8+",
+          "pattern": "/team join <team> [members]",
+          "params": {
+            "team": "Team to join",
+            "members": "Members (default self)"
+          }
+        },
+        {
+          "version_range": "1.8+",
+          "pattern": "/team leave [members]",
+          "params": {
+            "members": "Members to leave"
+          }
+        },
+        {
+          "version_range": "1.8+",
+          "pattern": "/team modify <team> <option> <value>",
+          "params": {
+            "team": "Team name",
+            "option": "displayName/color/friendlyfire/seeFriendlyInvisibles/nametagVisibility/deathMessageVisibility/collisionRule/prefix/suffix",
+            "value": "New value"
+          }
+        }
+      ],
+      "examples": [
+        "/team add red",
+        "/team join red @p",
+        "/team modify red color red",
+        "/team modify red friendlyfire false"
+      ]
+    },
+    {
+      "name": "teammsg",
+      "description": "Sends a message to all members of the sender team.",
+      "introduced": "Release 1.8",
+      "removed": null,
+      "permission_level": 0,
+      "multiplayer_only": false,
+      "aliases": [
+        "tm"
+      ],
+      "syntax": [
+        {
+          "version_range": "1.8+",
+          "pattern": "/teammsg <message>",
+          "params": {
+            "message": "Message to team members"
+          }
+        }
+      ],
+      "examples": [
+        "/teammsg Attack the objective!"
+      ]
+    },
+    {
+      "name": "worldborder",
+      "description": "Manages the world border size, center, and damage.",
+      "introduced": "Release 1.8",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.8+",
+          "pattern": "/worldborder <add|center|damage|get|set|warning> ...",
+          "params": {}
+        },
+        {
+          "version_range": "1.8+",
+          "pattern": "/worldborder set <size> [time]",
+          "params": {
+            "size": "Border radius in blocks",
+            "time": "Transition time in seconds"
+          }
+        },
+        {
+          "version_range": "1.8+",
+          "pattern": "/worldborder center <x> <z>",
+          "params": {
+            "x z": "New center coordinates"
+          }
+        },
+        {
+          "version_range": "1.8+",
+          "pattern": "/worldborder damage <amount|buffer> <value>",
+          "params": {
+            "property": "amount or buffer",
+            "value": "Damage per second or safe zone"
+          }
+        },
+        {
+          "version_range": "1.8+",
+          "pattern": "/worldborder get",
+          "params": {}
+        },
+        {
+          "version_range": "1.8+",
+          "pattern": "/worldborder warning <distance|time> <value>",
+          "params": {
+            "property": "distance or time",
+            "value": "Warning distance/blocks or time/seconds"
+          }
+        }
+      ],
+      "examples": [
+        "/worldborder set 500",
+        "/worldborder center 0 0",
+        "/worldborder add 100 60"
+      ]
+    },
+    {
+      "name": "bossbar",
+      "description": "Creates and modifies custom bossbars that display above the hotbar.",
+      "introduced": "Release 1.11",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.11+",
+          "pattern": "/bossbar add <id> <name>",
+          "params": {
+            "id": "Bossbar namespace:path",
+            "name": "JSON display name"
+          }
+        },
+        {
+          "version_range": "1.11+",
+          "pattern": "/bossbar remove <id>",
+          "params": {
+            "id": "Bossbar to remove"
+          }
+        },
+        {
+          "version_range": "1.11+",
+          "pattern": "/bossbar set <id> <color|style|value|max|visible|players> <value>",
+          "params": {
+            "id": "Bossbar ID",
+            "property": "color/red/green/blue/pink/yellow/white/purple, style/progress/notched_6/notched_10/notched_12/notched_20, value/max (int), visible (bool), players (targets)"
+          }
+        },
+        {
+          "version_range": "1.11+",
+          "pattern": "/bossbar get <id> <color|style|value|max|visible|players>",
+          "params": {}
+        },
+        {
+          "version_range": "1.11+",
+          "pattern": "/bossbar list",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/bossbar add my:bar {\"text\":\"Health\"}",
+        "/bossbar set my:bar color red",
+        "/bossbar set my:bar max 200",
+        "/bossbar set my:bar players @a"
+      ]
+    },
+    {
+      "name": "locate",
+      "description": "Finds the nearest structure, biome, or point of interest.",
+      "introduced": "Release 1.11",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.11 - 1.15",
+          "pattern": "/locate <structure>",
+          "params": {
+            "structure": "Structure type (Stronghold, Village, etc.)"
+          }
+        },
+        {
+          "version_range": "1.16 - 1.18",
+          "pattern": "/locate <structure|biome|poi> <type>",
+          "params": {
+            "type": "Feature/biome/POI"
+          }
+        },
+        {
+          "version_range": "1.19+",
+          "pattern": "/locate structure|biome|poi <id>",
+          "params": {
+            "type": "structure, biome, or poi",
+            "id": "Namespaced ID"
+          }
+        }
+      ],
+      "examples": [
+        "/locate structure minecraft:stronghold",
+        "/locate biome minecraft:desert"
+      ]
+    },
+    {
+      "name": "advancement",
+      "description": "Grants, removes, or checks player advancements.",
+      "introduced": "Release 1.12",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.12+",
+          "pattern": "/advancement <grant|revoke> <targets> <everything|only|from|through|until> <advancement>",
+          "params": {
+            "action": "grant or revoke",
+            "targets": "Target players",
+            "criterion": "everything/only/from/through/until",
+            "advancement": "Advancement ID or *"
+          }
+        }
+      ],
+      "examples": [
+        "/advancement grant @p everything",
+        "/advancement grant @p only minecraft:story/mine_diamond"
+      ]
+    },
+    {
+      "name": "recipe",
+      "description": "Gives or takes recipes from players.",
+      "introduced": "Release 1.12",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.12+",
+          "pattern": "/recipe <give|take> <targets> <recipe|*>",
+          "params": {
+            "action": "give or take",
+            "targets": "Target players",
+            "recipe": "Recipe ID or * for all"
+          }
+        }
+      ],
+      "examples": [
+        "/recipe give @p *",
+        "/recipe give @a minecraft:diamond_sword"
+      ]
+    },
+    {
+      "name": "tag",
+      "description": "Controls entity tags for identification and selection.",
+      "introduced": "Release 1.12",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.12+",
+          "pattern": "/tag <targets> <add|remove|list> [tagName]",
+          "params": {
+            "targets": "Target entities",
+            "action": "add/remove/list",
+            "tagName": "Tag name (required for add/remove)"
+          }
+        }
+      ],
+      "examples": [
+        "/tag @p add admin",
+        "/tag @e[type=Zombie] remove hostile",
+        "/tag @p list"
+      ]
+    },
+    {
+      "name": "function",
+      "description": "Runs a function from a data pack.",
+      "introduced": "Release 1.12",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.12+",
+          "pattern": "/function <name>",
+          "params": {
+            "name": "Function namespace:path"
+          }
+        },
+        {
+          "version_range": "1.20+",
+          "pattern": "/function <name> [<with|entity|storage> <source> [path]]",
+          "params": {
+            "name": "Function name",
+            "arguments": "Macro arguments source"
+          }
+        }
+      ],
+      "examples": [
+        "/function custom:my_function",
+        "/function minecraft:load"
+      ]
+    },
+    {
+      "name": "reload",
+      "description": "Reloads all data pack resources including functions, loot tables, and advancements.",
+      "introduced": "Release 1.12",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.12+",
+          "pattern": "/reload",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/reload"
+      ]
+    },
+    {
+      "name": "data",
+      "description": "Gets, merges, modifies, and removes block entity and entity NBT data.",
+      "introduced": "Release 1.13",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.13+",
+          "pattern": "/data <get|merge|modify|remove> <block|entity> <target> [path] [scale]",
+          "params": {
+            "targetType": "block or entity",
+            "target": "Position or selector",
+            "path": "NBT path (dot notation)",
+            "scale": "Result scale multiplier for get"
+          }
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/data merge block <pos> <nbt>",
+          "params": {
+            "pos": "Block position",
+            "nbt": "NBT to merge"
+          }
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/data modify block <pos> <path> <set|merge|append|prepend|insert> <value|from|string> ...",
+          "params": {}
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/data remove block <pos> <path>",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/data get block 0 0 0",
+        "/data merge entity @e[type=Zombie,limit=1] {IsBaby:1b}",
+        "/data get entity @p Health"
+      ]
+    },
+    {
+      "name": "datapack",
+      "description": "Controls which data packs are loaded and their order.",
+      "introduced": "Release 1.13",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.13+",
+          "pattern": "/datapack <enable|disable|list|create> ...",
+          "params": {}
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/datapack enable <name> [first|last|before|after <existing>]",
+          "params": {
+            "name": "Data pack name",
+            "position": "Load order"
+          }
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/datapack disable <name>",
+          "params": {
+            "name": "Data pack to disable"
+          }
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/datapack list [available|enabled]",
+          "params": {
+            "filter": "available or enabled packs"
+          }
+        }
+      ],
+      "examples": [
+        "/datapack enable \"vanilla\"",
+        "/datapack list available",
+        "/datapack disable custom:my_pack"
+      ]
+    },
+    {
+      "name": "execute",
+      "description": "Executes a command with modified context. The most powerful and complex command in Minecraft.",
+      "introduced": "Release 1.8 (old), 1.13 (new)",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.8 - 1.12",
+          "pattern": "/execute <entity> <x> <y> <z> <command>",
+          "params": {
+            "entity": "Entity to act as",
+            "x y z": "Position (~ ~ ~ for entity pos)",
+            "command": "Command to execute"
+          }
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/execute <subcommands...> run <command>",
+          "params": {
+            "subcommands": "as/at/if/unless/store/align/anchor/rotated/facing/in/on/summon",
+            "command": "Command to execute"
+          }
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/execute as <targets> at <targets> run <command>",
+          "params": {
+            "as": "Entities to act as",
+            "at": "Positions to execute at",
+            "command": "Command"
+          }
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/execute if entity <targets> run <command>",
+          "params": {
+            "condition": "if/unless",
+            "type": "entity/block/blocks/score/data/predicate/dimension/function/loaded",
+            "target": "Check target",
+            "command": "Command on success"
+          }
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/execute store <result|success> <block|entity|score|bossbar|storage> ... run <command>",
+          "params": {
+            "valueType": "result or success",
+            "target": "Storage target",
+            "path/slot": "Storage path",
+            "command": "Command whose output to store"
+          }
+        }
+      ],
+      "examples": [
+        "/execute as @a at @s run say Hi",
+        "/execute if entity @p run say Player exists",
+        "/execute as @e[type=Creeper] at @s run summon TNT ~ ~ ~",
+        "/execute store result score @p kills run kill @e[type=Zombie]"
+      ]
+    },
+    {
+      "name": "forceload",
+      "description": "Forces chunks to remain loaded constantly.",
+      "introduced": "Release 1.13.1",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.13.1+",
+          "pattern": "/forceload <add|remove|query> ...",
+          "params": {}
+        },
+        {
+          "version_range": "1.13.1+",
+          "pattern": "/forceload add <fromX> <fromZ> [toX] [toZ]",
+          "params": {
+            "fromX fromZ": "Start chunk",
+            "toX toZ": "End chunk"
+          }
+        },
+        {
+          "version_range": "1.13.1+",
+          "pattern": "/forceload remove <all|fromX> [fromZ] [toX] [toZ]",
+          "params": {}
+        },
+        {
+          "version_range": "1.13.1+",
+          "pattern": "/forceload query [pos]",
+          "params": {
+            "pos": "Optional position to check"
+          }
+        }
+      ],
+      "examples": [
+        "/forceload add 0 0",
+        "/forceload remove all"
+      ]
+    },
+    {
+      "name": "loot",
+      "description": "Spawns loot from a loot table into inventory or the world.",
+      "introduced": "Release 1.13",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.13+",
+          "pattern": "/loot <spawn|replace|insert|give> ...",
+          "params": {}
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/loot spawn <pos> <loot_table>",
+          "params": {
+            "pos": "Drop position",
+            "loot_table": "Loot table path"
+          }
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/loot give <targets> <loot_table>",
+          "params": {
+            "targets": "Players to give to",
+            "loot_table": "Loot table"
+          }
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/loot insert <pos> <loot_table>",
+          "params": {
+            "pos": "Container position",
+            "loot_table": "Loot table"
+          }
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/loot replace block <pos> <slot> <count> <loot_table>",
+          "params": {}
+        },
+        {
+          "version_range": "1.13+",
+          "pattern": "/loot replace entity <targets> <slot> <count> <loot_table>",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/loot give @p loot minecraft:chests/simple_dungeon",
+        "/loot spawn ~ ~ ~ loot minecraft:gameplay/fishing"
+      ]
+    },
+    {
+      "name": "schedule",
+      "description": "Schedules a function to run after a specified delay.",
+      "introduced": "Release 1.14",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.14+",
+          "pattern": "/schedule <function> <time> [append|replace]",
+          "params": {
+            "function": "Function to schedule",
+            "time": "Delay (e.g. 5s, 100t, 1d)",
+            "mode": "append or replace (default replace)"
+          }
+        },
+        {
+          "version_range": "1.14+",
+          "pattern": "/schedule clear <function>",
+          "params": {
+            "function": "Function to clear from schedule"
+          }
+        }
+      ],
+      "examples": [
+        "/schedule custom:my_function 5s",
+        "/schedule custom:alert 1d append"
+      ]
+    },
+    {
+      "name": "spectate",
+      "description": "Makes a player spectate an entity from its perspective.",
+      "introduced": "Release 1.15",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.15+",
+          "pattern": "/spectate [target] [player]",
+          "params": {
+            "target": "Entity to spectate (omit to stop)",
+            "player": "Player to set spectating"
+          }
+        }
+      ],
+      "examples": [
+        "/spectate @e[type=Enderman,limit=1]",
+        "/spectate"
+      ]
+    },
+    {
+      "name": "attribute",
+      "description": "Queries, adds, removes, or sets entity attributes.",
+      "introduced": "Release 1.16",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.16+",
+          "pattern": "/attribute <target> <attribute> get [scale]",
+          "params": {
+            "target": "Entity target",
+            "attribute": "Attribute ID",
+            "scale": "Scale multiplier"
+          }
+        },
+        {
+          "version_range": "1.16+",
+          "pattern": "/attribute <target> <attribute> base <get|set> [value]",
+          "params": {
+            "value": "Base value for set"
+          }
+        },
+        {
+          "version_range": "1.16+",
+          "pattern": "/attribute <target> <attribute> modifier <add|remove|get|value> ...",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/attribute @p minecraft:generic.max_health get",
+        "/attribute @p minecraft:generic.movement_speed base set 0.2"
+      ]
+    },
+    {
+      "name": "jfr",
+      "description": "Starts or stops JFR profiling for performance analysis.",
+      "introduced": "Release 1.16",
+      "removed": null,
+      "permission_level": 4,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.16+",
+          "pattern": "/jfr <start|stop>",
+          "params": {
+            "action": "start or stop"
+          }
+        }
+      ],
+      "examples": [
+        "/jfr start",
+        "/jfr stop"
+      ]
+    },
+    {
+      "name": "item",
+      "description": "Modifies or copies items in block or entity inventories.",
+      "introduced": "Release 1.17",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.17+",
+          "pattern": "/item <replace|modify> <block|entity> <target> <slot> [count] ...",
+          "params": {}
+        },
+        {
+          "version_range": "1.17+",
+          "pattern": "/item replace block <pos> <slot> [count] with <block|entity> <source> [<sourceSlot> [<modifier>]]",
+          "params": {
+            "pos": "Block position",
+            "slot": "Slot name",
+            "count": "Count",
+            "source": "Source position/selector",
+            "sourceSlot": "Source slot"
+          }
+        },
+        {
+          "version_range": "1.17+",
+          "pattern": "/item replace entity <targets> <slot> [count] with <block|entity> <source> [...]",
+          "params": {}
+        },
+        {
+          "version_range": "1.17+",
+          "pattern": "/item modify block <pos> <slot> <modifier>",
+          "params": {
+            "pos": "Block position",
+            "slot": "Slot",
+            "modifier": "Item modifier"
+          }
+        }
+      ],
+      "examples": [
+        "/item replace entity @p weapon.mainhand with block ~ ~ ~ container.0",
+        "/item modify entity @p weapon.mainhand custom:my_modifier"
+      ]
+    },
+    {
+      "name": "place",
+      "description": "Places a feature, jigsaw, template, or structure at a location.",
+      "introduced": "Release 1.19",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.19+",
+          "pattern": "/place <feature|jigsaw|structure|template> <id> [pos]",
+          "params": {
+            "type": "feature/jigsaw/structure/template",
+            "id": "Configuration ID",
+            "pos": "Position (default ~ ~ ~)"
+          }
+        }
+      ],
+      "examples": [
+        "/place structure minecraft:stronghold ~ ~ ~",
+        "/place feature minecraft:tree ~ ~ ~"
+      ]
+    },
+    {
+      "name": "perf",
+      "description": "Captures performance metrics for 10 seconds.",
+      "introduced": "Release 1.19",
+      "removed": null,
+      "permission_level": 4,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.19+",
+          "pattern": "/perf <start|stop>",
+          "params": {
+            "action": "start or stop"
+          }
+        }
+      ],
+      "examples": [
+        "/perf start",
+        "/perf stop"
+      ]
+    },
+    {
+      "name": "version",
+      "description": "Sends server version information including protocol and data versions.",
+      "introduced": "Release 1.19",
+      "removed": null,
+      "permission_level": 4,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.19+",
+          "pattern": "/version",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/version"
+      ]
+    },
+    {
+      "name": "damage",
+      "description": "Applies damage to specified entities with optional damage type and source.",
+      "introduced": "Release 1.19.4",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.19.4+",
+          "pattern": "/damage <target> <amount> [damageType] [at <entity|location> ...] [by <entity> [from ...]]",
+          "params": {
+            "target": "Entities to damage",
+            "amount": "Damage amount",
+            "damageType": "Damage type ID",
+            "at": "Source entity/location",
+            "by": "Entity that caused damage"
+          }
+        }
+      ],
+      "examples": [
+        "/damage @e[type=!player] 10",
+        "/damage @p 5 minecraft:magic"
+      ]
+    },
+    {
+      "name": "fillbiome",
+      "description": "Fills a region with a specific biome.",
+      "introduced": "Release 1.19.4",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.19.4+",
+          "pattern": "/fillbiome <from> <to> <biome> [replace [filter]]",
+          "params": {
+            "from": "Start position",
+            "to": "End position",
+            "biome": "Biome ID",
+            "replace": "Only replace matching biomes",
+            "filter": "Filter biome"
+          }
+        }
+      ],
+      "examples": [
+        "/fillbiome 0 -64 0 100 320 100 minecraft:desert"
+      ]
+    },
+    {
+      "name": "ride",
+      "description": "Makes an entity ride or dismount another entity.",
+      "introduced": "Release 1.19.4",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.19.4+",
+          "pattern": "/ride <target> <mount|dismount> [vehicle]",
+          "params": {
+            "target": "Rider entity",
+            "action": "mount or dismount",
+            "vehicle": "Entity to mount"
+          }
+        }
+      ],
+      "examples": [
+        "/ride @p mount @e[type=Horse,limit=1]",
+        "/ride @p dismount"
+      ]
+    },
+    {
+      "name": "rotate",
+      "description": "Rotates an entity to face a direction or location.",
+      "introduced": "Release 1.19.4",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.19.4+",
+          "pattern": "/rotate <targets> <rotation> [rotation]",
+          "params": {
+            "targets": "Entities to rotate",
+            "yRot": "Y-rotation (degrees)",
+            "xRot": "X-rotation (degrees)"
+          }
+        },
+        {
+          "version_range": "1.19.4+",
+          "pattern": "/rotate <targets> facing <pos>",
+          "params": {
+            "targets": "Entities",
+            "pos": "Position to face"
+          }
+        },
+        {
+          "version_range": "1.19.4+",
+          "pattern": "/rotate <targets> facing entity <target> [eyes|feet]",
+          "params": {
+            "targets": "Entities to rotate",
+            "target": "Entity to face",
+            "anchor": "eyes or feet"
+          }
+        }
+      ],
+      "examples": [
+        "/rotate @p 90 45",
+        "/rotate @p facing 0 64 0"
+      ]
+    },
+    {
+      "name": "return",
+      "description": "Controls execution flow inside functions and changes return value.",
+      "introduced": "Release 1.20",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.20+",
+          "pattern": "/return <fail|run <command>> [value]",
+          "params": {
+            "fail": "Return fail (0)",
+            "run": "Run command and return result",
+            "value": "Integer value to return"
+          }
+        }
+      ],
+      "examples": [
+        "/return run say Hello",
+        "/return fail",
+        "/return 1"
+      ]
+    },
+    {
+      "name": "random",
+      "description": "Generates random values and rolls random numbers.",
+      "introduced": "Release 1.20.3",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.20.3+",
+          "pattern": "/random <value|roll|reset> [range] [sequence]",
+          "params": {
+            "operation": "value/roll/reset",
+            "range": "Integer range (e.g. 1..100)",
+            "sequence": "Optional sequence name"
+          }
+        },
+        {
+          "version_range": "1.20.3+",
+          "pattern": "/random value <range> [sequence]",
+          "params": {
+            "range": "Range",
+            "sequence": "Sequence"
+          }
+        },
+        {
+          "version_range": "1.20.3+",
+          "pattern": "/random roll <range> [sequence]",
+          "params": {}
+        },
+        {
+          "version_range": "1.20.3+",
+          "pattern": "/random reset <sequence> [width] [height]",
+          "params": {}
+        }
+      ],
+      "examples": [
+        "/random value 1..100",
+        "/random roll 0..5"
+      ]
+    },
+    {
+      "name": "tick",
+      "description": "Controls the game tick rate, freezing, and stepping.",
+      "introduced": "Release 1.20.3",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.20.3+",
+          "pattern": "/tick <query|rate|freeze|unfreeze|step|sprint> ...",
+          "params": {}
+        },
+        {
+          "version_range": "1.20.3+",
+          "pattern": "/tick query",
+          "params": {}
+        },
+        {
+          "version_range": "1.20.3+",
+          "pattern": "/tick rate <rate>",
+          "params": {
+            "rate": "Target tick rate per second"
+          }
+        },
+        {
+          "version_range": "1.20.3+",
+          "pattern": "/tick freeze",
+          "params": {}
+        },
+        {
+          "version_range": "1.20.3+",
+          "pattern": "/tick unfreeze",
+          "params": {}
+        },
+        {
+          "version_range": "1.20.3+",
+          "pattern": "/tick step [time] [stop]",
+          "params": {
+            "time": "Ticks to step through"
+          }
+        },
+        {
+          "version_range": "1.20.3+",
+          "pattern": "/tick sprint <time> [stop]",
+          "params": {
+            "time": "Ticks to sprint through"
+          }
+        }
+      ],
+      "examples": [
+        "/tick query",
+        "/tick freeze",
+        "/tick step 10",
+        "/tick rate 40"
+      ]
+    },
+    {
+      "name": "transfer",
+      "description": "Transfers a player to another server.",
+      "introduced": "Release 1.20.5",
+      "removed": null,
+      "permission_level": 3,
+      "multiplayer_only": true,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.20.5+",
+          "pattern": "/transfer <hostname> [port] [players]",
+          "params": {
+            "hostname": "Target server address",
+            "port": "Port (default 25565)",
+            "players": "Players to transfer"
+          }
+        }
+      ],
+      "examples": [
+        "/transfer hub.example.com",
+        "/transfer 192.168.1.100 25566 @a"
+      ]
+    },
+    {
+      "name": "dialog",
+      "description": "Shows or hides dialog/UI screens for players.",
+      "introduced": "Release 1.20.5",
+      "removed": null,
+      "permission_level": 2,
+      "multiplayer_only": false,
+      "aliases": [],
+      "syntax": [
+        {
+          "version_range": "1.20.5+",
+          "pattern": "/dialog <open|close> <targets> [dialog]",
+          "params": {
+            "action": "open or close",
+            "targets": "Players",
+            "dialog": "Dialog ID for open"
+          }
+        }
+      ],
+      "examples": [
+        "/dialog open @p custom:welcome",
+        "/dialog close @a"
+      ]
+    }
+  ],
+  "notes": ""
+}

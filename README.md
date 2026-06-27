@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="gh-db/img/banner.png" alt="MCCommands Banner">
+  <a href="https://github.com/plib-osp/mccommands" target="_blank">
+    <img src="gh-db/img/banner.png" alt="MCCommands Banner">
+  </a>
 </p>
 
 **MCCommands** is a comprehensive, version-aware Minecraft command reference platform built for developers, server administrators, and command enthusiasts. It addresses a common pain point in the Minecraft ecosystem: command syntax, permissions, and availability change significantly across game versions, and existing documentation is often fragmented, outdated, or buried in sprawling wiki pages. MCCommands centralizes every command from every version into a single, queryable API and web interface, saving countless hours of manual research.
